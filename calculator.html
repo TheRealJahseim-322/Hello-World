@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        input, select, button {
+            margin: 5px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #eee;
+        }
+        #cancelMessage {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="num1" placeholder="Enter first number">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="num2" placeholder="Enter second number">
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="showSummary()">Show Summary</button>
+    <button onclick="cancelCalculator()">Cancel</button>
+
+    <div id="results"></div>
+    <div id="summary"></div>
+    <div id="cancelMessage"></div>
+
+    <script src="calculator.js"></script>
+
+
+</body>
+</html>
